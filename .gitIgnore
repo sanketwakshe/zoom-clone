@@ -1,2 +1,3 @@
 frontend/none_modules
 backend/node_modules
+.env
