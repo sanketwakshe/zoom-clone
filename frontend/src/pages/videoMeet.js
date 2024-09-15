@@ -20,7 +20,7 @@ const peerConfigConnections = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 
-const server_url = "http://localhost:8080";
+const server_url = "server";
 
 function VideoMeet() {
   var socketRef = useRef(); // direct socket address
