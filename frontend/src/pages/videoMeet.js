@@ -5,14 +5,17 @@ import MicOffIcon from '@mui/icons-material/MicOff';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import VideocamIcon from '@mui/icons-material/Videocam';
-import { Badge } from '@mui/material';
-
 import VideocamOffIcon from '@mui/icons-material/VideocamOff';
-
-import { Button, IconButton, TextField } from "@mui/material";
+import { Badge, Button, IconButton, TextField } from '@mui/material';
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
+import server from '../environment';
 import "../style/videoComponent.css";
+
+
+
+
+const server_url =`${server}`;
 
 var connections = {};
 
@@ -20,7 +23,7 @@ const peerConfigConnections = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 
-const server_url = "server";
+
 
 function VideoMeet() {
   var socketRef = useRef(); // direct socket address
